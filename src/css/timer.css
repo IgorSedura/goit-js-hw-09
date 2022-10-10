@@ -22,5 +22,34 @@ padding-top: 20px;
     font-size: 10px;
 }
 
+button {
 
+    font-family: inherit;
+    padding: 0.5em 1.3em;
+    font-weight: 700;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
 
+}
+
+button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+#datetime-picker{
+    font-family: inherit;
+        padding: 0.5em 1.3em;
+        font-weight: 700;
+        font-size: 18px;
+        border: 3px solid black;
+        border-radius: 0.4em;
+        box-shadow: 0.1em 0.1em;
+}

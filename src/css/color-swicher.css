@@ -18,6 +18,7 @@ button {
     border: 3px solid black;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
+    
 }
 
 button:hover {
@@ -32,7 +33,9 @@ button:active {
 
 .btn__start {
     background: #09ac4a;
+   
 }
 .btn__stop {
     background: #ac0909;
+    
 }
