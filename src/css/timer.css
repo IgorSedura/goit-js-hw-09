@@ -1,0 +1,26 @@
+.timer {
+display: flex;
+}
+
+
+
+.field {
+display: flex;
+flex-direction: column;
+text-align: center;
+width: 80px;
+padding-top: 20px;
+}
+
+.value {
+    font-family:'Press Start 2P';
+    font-size: 30px;
+}
+
+.label {
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+}
+
+
+
