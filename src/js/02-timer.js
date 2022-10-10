@@ -13,7 +13,6 @@ const refs = {
   seconds: document.querySelector('[data-seconds]'),
 };
 
-const timerRef = document.querySelector('timer');
 refs.btnStartTimer.addEventListener('click', onHandleClick);
 
 const date = new Date();
