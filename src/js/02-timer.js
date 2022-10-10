@@ -23,7 +23,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    dateSelected = selectedDates[0].getTime();
+    dateSelected = selectedDates[0];
 
     if (dateSelected > date) {
       refs.btnStartTimer.disabled = false;
