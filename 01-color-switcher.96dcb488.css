@@ -1,0 +1,2 @@
+.thumb{justify-content:center;gap:15px;display:flex;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}button{border:3px solid #000;border-radius:.4em;padding:.6em 1.3em;font-family:inherit;font-size:18px;font-weight:900;box-shadow:.1em .1em}button:hover{transform:translate(-.05em,-.05em);box-shadow:.15em .15em}button:active{transform:translate(.05em,.05em);box-shadow:.05em .05em}.btn__start{background:#09ac4a}.btn__stop{background:#ac0909}
+/*# sourceMappingURL=01-color-switcher.96dcb488.css.map */
