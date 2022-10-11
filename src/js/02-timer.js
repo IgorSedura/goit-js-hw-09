@@ -24,16 +24,16 @@ const options = {
 
   minuteIncrement: 1,
   onClose(selectedDates) {
-    dateSelected = Date.parse(defaultDate);
-
-    console.log(defaultDate);
-    if (dateSelected > date) {
+    dateSelected = selectedDates[0].getTime();
+    const deltaTime = dateSelected - Date.now();
+    if (deltaTime >= 0) {
       refs.btnStartTimer.disabled = false;
     } else {
       refs.btnStartTimer.disabled = true;
       Notify.failure(
         'Вибраний час вже в минулому. Введіть дату з майбутнього!'
       );
+      console.log(selectedDates);
     }
   },
 };
