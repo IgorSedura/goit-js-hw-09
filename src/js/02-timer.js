@@ -21,23 +21,20 @@ const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
-
   minuteIncrement: 1,
   onClose(selectedDates) {
-    dateSelected = Date.parse(selectDate.selectedDates[0]);
-    const deltaTime = dateSelected - Date.now();
-    if (deltaTime >= 0) {
+    if (selectDate.selectedDates[0] > date) {
       refs.btnStartTimer.disabled = false;
     } else {
       refs.btnStartTimer.disabled = true;
       Notify.failure(
         'Вибраний час вже в минулому. Введіть дату з майбутнього!'
       );
-      console.log(selectedDates);
     }
   },
 };
 const selectDate = flatpickr(refs.input, options);
+
 const timer = {
   intervalId: null,
   isActive: false,
@@ -48,7 +45,7 @@ const timer = {
     this.isActive = true;
 
     this.intervalId = setInterval(() => {
-      const deltaTime = dateSelected - Date.now();
+      const deltaTime = Date.parse(selectDate.selectedDates[0]) - Date.now();
       console.log(deltaTime);
       const data = convertMs(deltaTime);
       Object.entries(data).forEach(([name, value]) => {
