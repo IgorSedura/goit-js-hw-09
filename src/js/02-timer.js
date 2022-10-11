@@ -21,11 +21,12 @@ const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
+
   minuteIncrement: 1,
   onClose(selectedDates) {
-    dateSelected = Date.parse(selectedDates);
-    console.log(dateSelected);
+    dateSelected = Date.parse(defaultDate);
 
+    console.log(defaultDate);
     if (dateSelected > date) {
       refs.btnStartTimer.disabled = false;
     } else {
