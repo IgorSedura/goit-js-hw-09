@@ -15,15 +15,17 @@ const refs = {
 
 refs.btnStartTimer.addEventListener('click', onHandleClick);
 
-const date = new Date();
 refs.btnStartTimer.disabled = true;
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
+
   minuteIncrement: 1,
   onClose(selectedDates) {
-    if (selectDate.selectedDates[0] > date) {
+    let dateSelected = selectDate.selectedDates[0];
+    const deltaTime = dateSelected - Date.now();
+    if (deltaTime >= 0) {
       refs.btnStartTimer.disabled = false;
     } else {
       refs.btnStartTimer.disabled = true;
@@ -34,7 +36,6 @@ const options = {
   },
 };
 const selectDate = flatpickr(refs.input, options);
-
 const timer = {
   intervalId: null,
   isActive: false,
