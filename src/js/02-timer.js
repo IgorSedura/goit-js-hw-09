@@ -24,7 +24,7 @@ const options = {
 
   minuteIncrement: 1,
   onClose(selectedDates) {
-    dateSelected = setData.selectedDates[0].getTime();
+    dateSelected = Date.parse(selectDate.selectedDates[0]);
     const deltaTime = dateSelected - Date.now();
     if (deltaTime >= 0) {
       refs.btnStartTimer.disabled = false;
@@ -37,7 +37,7 @@ const options = {
     }
   },
 };
-const setData = flatpickr(refs.input, options);
+const selectDate = flatpickr(refs.input, options);
 const timer = {
   intervalId: null,
   isActive: false,
