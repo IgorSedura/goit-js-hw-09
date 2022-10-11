@@ -23,7 +23,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    dateSelected = selectedDates[0].getTime();
+    dateSelected = selectedDates.getTime();
 
     if (dateSelected > date) {
       refs.btnStartTimer.disabled = false;
@@ -47,6 +47,7 @@ const timer = {
 
     this.intervalId = setInterval(() => {
       const deltaTime = dateSelected - Date.now();
+      console.log(deltaTime);
       const data = convertMs(deltaTime);
       Object.entries(data).forEach(([name, value]) => {
         refs[name].textContent = addLeadingZero(value);
