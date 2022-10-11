@@ -24,7 +24,7 @@ const options = {
 
   minuteIncrement: 1,
   onClose(selectedDates) {
-    dateSelected = selectedDates[0].getTime();
+    dateSelected = setData.selectedDates[0].getTime();
     const deltaTime = dateSelected - Date.now();
     if (deltaTime >= 0) {
       refs.btnStartTimer.disabled = false;
