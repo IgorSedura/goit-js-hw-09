@@ -22,8 +22,8 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
-  onClose(selectedDates) {
-    dateSelected = defaultDate.getTime();
+  onClose(selectDate) {
+    dateSelected = Date.parse(selectDate.selectedDates[0]);
     console.log(dateSelected);
 
     if (dateSelected > date) {
